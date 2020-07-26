@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(window).on('load', function() 
+			{
+				i = 0
+				setInterval(function()
+				{ 
+
+					document.getElementsByClassName("trippin")[0].style.filter = `hue-rotate(${i}deg)`;
+					i += 5;
+				}, 10);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div class="info">
+			<ul class="links">
+				<li><a href="https://github.com/Cambysses?tab=repositories" target="_blank">Github</a></li>
+				<li><a href="https://www.instagram.com/jerbearhfx/" target="_blank">Hobby</a></li>
+				<li><a href="./about" target="_blank">About</a></li>
+			</ul>
+			<a href="https://www.youtube.com/watch?v=SA2o6Nac9Yg" target="_blank">
+				<div class="monkey-container">
+					<img src="trippin.png" class="trippin">
+					<img src="monkey.png" class="monkey">
+				</div>
+			</a>
+		</div>
+	</body>
 </html>
