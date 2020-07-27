@@ -1,6 +1,5 @@
 $(window).on('load', function() 
 {
-	$("body").css("display", "none");
 	$("body").fadeIn(1000);
 	
 	$("a.transition").click(function(event)
@@ -16,7 +15,7 @@ $(window).on('load', function()
 	}
 });
 
-function adjustAudio()
+function toggleAudio()
 {
 	var state = document.getElementById("state");
 	var music = document.getElementById("music");

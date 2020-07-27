@@ -10,6 +10,10 @@ html, body {
 	color: #07db7c;
 }
 
+body {
+	display: none;
+}
+
 a {
 	text-decoration: none;
 	transition: color 0.25s;
