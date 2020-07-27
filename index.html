@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="content/style.css">
+		<title>Cambysses</title>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Anonymous Pro' >
+		<link rel="stylesheet" href="content/styles.css" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="content/shared_scripts.js"></script>
 		<script>
 			$(window).on('load', function() 
 			{
 				i = 0
 				setInterval(function()
 				{ 
-
 					document.getElementsByClassName("trippin")[0].style.filter = `hue-rotate(${i}deg)`;
 					i += 5;
 				}, 10);
 			});
 		</script>
 	</head>
-	
 	<body>
-		<div class="info">
+		<section class="content-container">
 			<ul class="links">
 				<li><a href="https://github.com/Cambysses?tab=repositories" target="_blank">Github</a></li>
 				<li><a href="https://www.instagram.com/jerbearhfx/" target="_blank">Hobby</a></li>
-				<li><a href="./about" target="_blank">About</a></li>
+				<li><a href="./about.html" class="transition">About</a></li>
 			</ul>
 			<a href="https://www.youtube.com/watch?v=SA2o6Nac9Yg" target="_blank">
-				<div class="monkey-container">
-					<img src="content/trippin.png" class="trippin">
+				<section class="monkey-container">
+					<img src="content/trippin.gif" class="trippin">
 					<img src="content/monkey.png" class="monkey">
-				</div>
+				</section>
 			</a>
-		</div>
+		</section>
+		<section class="music-container">
+			<audio id="music">
+				<source src="content/donkey.mp3" type="audio/mp3">
+			</audio>
+			<p id="state" onclick="adjustAudio()">▶</p>
+		</section>
 	</body>
 </html>
