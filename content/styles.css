@@ -18,17 +18,17 @@ a {
 	text-decoration: none;
 	transition: color 0.25s;
 	color: #07db7c;
+	outline: 0;
 }
 
 	a:hover {
 		color: #b4fad2;
 	}
 
-.back {
+.back  {
+	vertical-align: top;
 	padding: 0;
-	padding-bottom: 25px;
 	margin: 0;
-	text-align: left;
 }
 
 .content-container {
@@ -86,7 +86,7 @@ a {
 	left: 0;
 	padding: 5px;
 	margin: 0;
-	color: #ffffff;
+	color: #07db7c;
 }
 
 
