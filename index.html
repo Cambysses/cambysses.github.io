@@ -19,11 +19,12 @@
 		</script>
 	</head>
 	<body>
-		<section class="content-container">
+		<!-- INDEX -->
+		<section class="content index-container">
 			<ul class="links">
 				<li><a href="https://github.com/Cambysses?tab=repositories" target="_blank">Github</a></li>
 				<li><a href="https://www.instagram.com/jerbearhfx/" target="_blank">Hobby</a></li>
-				<li><a href="about" class="transition">About</a></li>
+				<li><p class="internal-link" onclick="loadContent('about')">About</p></li>
 			</ul>
 			<a href="https://www.youtube.com/watch?v=SA2o6Nac9Yg" target="_blank">
 				<section class="monkey-container">
@@ -32,6 +33,28 @@
 				</section>
 			</a>
 		</section>
+		
+		<!-- ABOUT -->
+		<section class="content about-container">
+			<section class="skills">
+				<section class="back">
+					<p class="back internal-link" onclick="loadContent('index')">X</p>
+				</section>
+				<section>
+					<ul>
+						<li>PowerShell</li>
+						<li>Python</li>
+						<li>C#</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>ASP.NET</li>
+					</ul>
+				</section>		
+			</section>
+		</section>
+		
+		<!-- MUSIC PLAYER -->
 		<section class="music-container">
 			<audio id="music">
 				<source src="content/donkey.mp3" type="audio/mp3">

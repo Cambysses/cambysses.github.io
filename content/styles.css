@@ -16,14 +16,9 @@ body {
 
 a {
 	text-decoration: none;
-	transition: color 0.25s;
 	color: #07db7c;
 	outline: 0;
 }
-
-	a:hover {
-		color: #b4fad2;
-	}
 
 .back  {
 	vertical-align: top;
@@ -31,7 +26,8 @@ a {
 	margin: 0;
 }
 
-.content-container {
+.content {
+	display: none;
 	width: 100%;
 	margin: 0;
 	position: absolute;
@@ -51,9 +47,26 @@ a {
 	vertical-align: middle;
 }
 
-.links li {
+.links a, li {
+	transition: color 0.25s;
 	padding: 10px;
 }
+
+	.links a:hover {
+		cursor: pointer;
+		color: #b4fad2;
+	}
+
+.internal-link {
+	transition: color 0.25s;
+	padding: 0;
+	margin: 0;
+}
+
+	.internal-link:hover {
+		cursor: pointer;
+		color: #b4fad2;
+	}
 
 .monkey-container {
 	margin: 20px auto;
@@ -89,4 +102,21 @@ a {
 	color: #07db7c;
 }
 
+.skills section {
+	display: inline-block;
+}
 
+.skills ul {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	list-style: inside;
+	list-style: none;
+	outline: solid;
+	outline-width: 5px;
+	outline-offset: 10px;
+}
+
+.skills li {
+	padding-bottom: 
+}
