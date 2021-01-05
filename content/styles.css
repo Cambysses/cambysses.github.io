@@ -67,6 +67,11 @@ a {
 		cursor: pointer;
 		color: #b4fad2;
 	}
+	
+.icon {
+	width: 25%;
+	filter: invert(100);
+}
 
 .monkey-container {
 	margin: 20px auto;
@@ -93,13 +98,27 @@ a {
 		left: 2px;
 	}
 	
-.music-container * {
+.music-container {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	padding: 5px;
 	margin: 0;
 	color: #07db7c;
+}
+
+.music-container ul {
+	outline: solid;
+	outline-width: 5px;
+	outline-offset: 5px;
+}
+
+.music-container li {
+	font-size: 50%;
+	margin: 0;
+	padding: 0;
+	list-style: inside;
+	list-style: none;
 }
 
 .skills section {
@@ -120,3 +139,4 @@ a {
 .skills li {
 	padding-bottom: 
 }
+

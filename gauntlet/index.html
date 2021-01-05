@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Retro Game Gauntlet</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="games.js"></script>
+	<script>
+	$(function() {
+		$("#game-announcer").hide();
+		$("li").click(function(e){
+			e.preventDefault();
+			var system = $(this).attr('id');
+			var announcetext = "Your "+$(this).text()+" game is";
+			var randomGame = 
+			$('#pre-game').html(announcetext);
+			$('#game').html(games[system][Math.floor(Math.random() * games[system].length)]);
+			$('#game-announcer').show();
+		});
+	});
+	</script>
+	<body>
+		<h1>Retro Game Gauntlet</h1>
+		<div id="game-announcer">
+			<h3 id="pre-game">Your game is</h3>
+			<h2 id="game"></h2>
+		</div>
+		<div id="game-select">
+			<ul>
+				<li id="nes">NES</li>
+				<li id="snes">SNES</li>
+				<li id="n64">Nintendo 64</li>
+				<li id="gb">Game Boy</li>
+				<li id="gbc">Game Boy Color</li>
+				<li id="gba">Game Boy Advance</li>
+				<li id="mastersystem">Master System</li>
+				<li id="genesis">Megadrive/Genesis</li>
+				<li id="gamegear">Gamegear</li>
+				<li id="tg16">Turbografx16</li>
+				<li id="neogeo">NeoGeo</li>
+			</ul>
+			<br/>
+		</div>
+		<p>
+		<strong>Rules:</strong> Shit son, I don't know. Go ask /vr/ or something.<br/>
+		<strong><a href="games.js">List of games</a></strong> incase you don't trust the random number generator.<br/>
+		<strong><a href="pasta.txt">The copypasta</a></strong> and <strong><a href="thread.png">image</a></strong>.<br/>
+		<p>Any problems, <a href="mailto:cambysses.dev@gmail.com">email</a> me. - Cambysses</p>
+		<p><a href="https://github.com/Cambysses/cambysses.github.io/gauntlet">Sauce</a>
+	</body>
+</html>
