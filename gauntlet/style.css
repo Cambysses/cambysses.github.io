@@ -8,13 +8,16 @@ body {
 	font-family: helvetica, arial, sans-serif;
 }
 
+strong {
+	color: #ffffff;
+}
+
 a:link {
-	color: white;
-	
+	color: #ffffff;	
 }
 
 a:visited {
-	color: #bbb;
+	color: #ffffff;
 }
 
 #game-announcer {
@@ -39,22 +42,37 @@ a:visited {
 	width: 250px;
 	margin-left: auto;
 	margin-right: auto;
-	color: #ffffff;
-	text-decoration: underline;	
 }
 
-ul{
+#game-select ul {
 	list-style-type: none;
 	padding: 0;
-	margin: 0;
+	margin: 0;	
 }
 
-li:hover {
+#game-select ul li:hover {
+	color: #ffffff;
 	cursor: pointer;
 }
 
-html{
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 99%;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li {
+	
+	display: inline;
+}
+
+
+html {
 	text-align: center;
-	background: #444;
-	color: #aaa;
+	background: #444444;
+	color: #aaaaaa;
 }

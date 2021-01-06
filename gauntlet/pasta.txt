@@ -1,8 +1,6 @@
 Welcome to the Retro Game Gauntlet, gentlemen.
 
 
-The screen dreaded by most gauntleteers
-
 Start at NES, and work through in the following order:
 
 NES
@@ -15,26 +13,25 @@ NeoGeo
 GBA OR Sega Master System
 Commodore 64 OR Commodore Amiga
 Playstation 1 OR Nintendo 64
-You have three days to complete the game without assistance (each game gets three days, though RPGs are allowed a week due to length). Select your system here:
+You have three days to complete the game without assistance (each game gets three days, though RPGs are allowed a week due to length). 
+
+Select your system here:
 http://cambysses.com/gauntlet
 
 You can also do it manually if you don't trust the random number generator:
-
 http://cambysses.com/gauntlet/games.js
 
 AND BRING ME SCREENSHOTS PARKER
+
 
 Rules:
 
 1) Savestates are allowed ONLY for the purpose of taking screenshots and ONLY if your emulator/game in question does not have a pause function.
 
-
-The medal every gauntleteer dreams to gain
-
 2) Rerolls are allowed under the following conditions:
-
-The game you get requires some sort of hardware functionality that cannot be accurately emulated to complete (eg, Boktai)
-The game would otherwise require cheats, hacks, or alteration of the software to complete due to a bug (eg, Cheetahmen II)
+	The game you get requires some sort of hardware functionality that cannot be accurately emulated to complete (eg, Boktai)
+	The game would otherwise require cheats, hacks, or alteration of the software to complete due to a bug (eg, Cheetahmen II)
+	
 3) Playstation 1 games can be given up to 2 weeks to complete if the game is more than 2 discs.
 
 4) If you lose / give up to a game you have to go back one square instead (ie if you gave up a Genesis game, you go back to GB/GBA and continue frome there)
@@ -42,7 +39,6 @@ The game would otherwise require cheats, hacks, or alteration of the software to
 5) For Rule 4, if the game you fail is on the same path as another console, you have the choice to roll for that console instead of dropping down a level.
 
 For games that have a high score or no end, the rule is:
-
-If no high score has been established, set a goal and beat it
-if you're playing something another anon already has a high score on, beat their high score
-If you are playing extended rpgs/pokemon/whatever you get a week [Depending on the game needs to be asked in thread
+	If no high score has been established, set a goal and beat it
+	if you're playing something another anon already has a high score on, beat their high score
+	If you are playing extended rpgs/pokemon/whatever you get a week [Depending on the game needs to be asked in thread

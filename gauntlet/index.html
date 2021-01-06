@@ -10,7 +10,7 @@
 	<script>
 	$(function() {
 		$("#game-announcer").hide();
-		$("li").click(function(e){
+		$("#game-select ul li").click(function(e){
 			e.preventDefault();
 			var system = $(this).attr('id');
 			var announcetext = "Your "+$(this).text()+" game is";
@@ -37,17 +37,26 @@
 				<li id="gba">Game Boy Advance</li>
 				<li id="mastersystem">Master System</li>
 				<li id="genesis">Megadrive/Genesis</li>
+				<li id="saturn">Saturn</li>
+				<li id="dreamcast">Dreamcast</li>
 				<li id="gamegear">Gamegear</li>
 				<li id="tg16">Turbografx16</li>
+				<li id="mame">MAME<li>
 				<li id="neogeo">NeoGeo</li>
+				<li id="amiga">Amiga</li>			
 			</ul>
 			<br/>
 		</div>
 		<p>
-		<strong>Rules:</strong> Shit son, I don't know. Go ask /vr/ or something.<br/>
-		<strong><a href="games.js">List of games</a></strong> incase you don't trust the random number generator.<br/>
-		<strong><a href="pasta.txt">The copypasta</a></strong> and <strong><a href="thread.png">image</a></strong>.<br/>
-		<p>Any problems, <a href="mailto:cambysses.dev@gmail.com">email</a> me. - Cambysses</p>
-		<p><a href="https://github.com/Cambysses/cambysses.github.io/gauntlet">Sauce</a>
+		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See thread/copypasta for more detailed rules.<br/>
+		<a href="games.js">List of games</a> in case you don't trust the random number generator.<br/>
+		<a href="pasta.txt">The copypasta</a> and <a href="thread.png">image</a>.<br/>
 	</body>
+	<footer>
+		<ul>
+			<li><a href="mailto:cambysses.dev@gmail.com">contact me with suggestions or bugs</a> | </li>
+			<li><a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet">source</a> | </li>
+			<li><a href="https://github.com/s3krit">original site created by s3krit</a></li>
+		</ul>
+	</footer>
 </html>
