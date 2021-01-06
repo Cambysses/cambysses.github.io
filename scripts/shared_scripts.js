@@ -5,17 +5,6 @@ $(window).on('load', function()
 	$(".index-container").fadeIn(1000);
 });
 
-// Propagate music player with songs.
-$(window).on('load', function() 
-{
-	var player = $(".music-player")[0];
-	var songs = $("source");
-	for (var song of songs)
-	{
-		player.innerHTML += `<li>${song.getAttribute('data-title')} - ${song.getAttribute('data-album')}</li>`
-	}
-});
-
 // Fade out current page, fade in new page.
 function loadContent(content)
 {
