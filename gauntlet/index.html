@@ -10,26 +10,28 @@
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-
 		  gtag('config', 'G-00GK9Y91HG');
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$("#game-announcer").hide();
+				$("#game-select ul li").click(function(e){
+					e.preventDefault();
+					$('#pre-game').html(`Your ${$(this).text()} game is`);
+					(async () => {
+						let response = await fetch(`games/${$(this).attr('id')}.txt`);
+						let games = await response.text();
+						games = games.split('\n');
+						let randomGame = games[Math.floor(Math.random() * games.length)];
+						$('#game').html(randomGame);
+				})()
+					$('#game-announcer').show();
+				});
+			});
+		</script>
 	</head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="games.js"></script>
-	<script>
-	$(function() {
-		$("#game-announcer").hide();
-		$("#game-select ul li").click(function(e){
-			e.preventDefault();
-			var system = $(this).attr('id');
-			var announcetext = "Your "+$(this).text()+" game is";
-			var randomGame = 
-			$('#pre-game').html(announcetext);
-			$('#game').html(games[system][Math.floor(Math.random() * games[system].length)]);
-			$('#game-announcer').show();
-		});
-	});
-	</script>
+	
 	<body>
 		<h1>Retro Game Gauntlet</h1>
 		<div id="game-announcer">
@@ -58,8 +60,8 @@
 			<br/>
 		</div>
 		<p>
-		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See thread/copypasta for more detailed rules.<br/>
-		<a href="games.js">List of games</a> in case you don't trust the random number generator.<br/>
+		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See <a href='https://boards.4channel.org/vr/catalog#s=gauntlet' target='_blank'>thread</a>/copypasta for more detailed rules.<br/>
+		<a href="games/">List of games</a> in case you don't trust the random number generator.<br/>
 		<a href="pasta.txt">The copypasta</a> and <a href="thread.png">image</a>.<br/>
 	</body>
 	<footer>
