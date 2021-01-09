@@ -35,7 +35,6 @@ a:visited {
 	color: #ffffff;
 }
 
-
 #game-announcer {
    font-family: "Press Start 2P",serif; 
    font-weight: normal;
@@ -75,10 +74,11 @@ a:visited {
 }
 
 footer {
+	padding-top: 150px;
 	position: relative;
-	padding-top: 200px;
-    bottom: 0;
-    width: 100%;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 footer ul {
