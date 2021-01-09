@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<title>Retro Game Gauntlet</title>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="content/style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+		<link rel="icon" type="image/png" href="content/favicon.png">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-00GK9Y91HG"></script>
 		<script>
@@ -20,8 +21,7 @@
 					e.preventDefault();
 					$('#pre-game').html(`Your ${$(this).text()} game is`);
 					(async () => {
-						let response = await fetch(`games/${$(this).attr('id')}.txt`);
-						let games = await response.text();
+						let games = await fetch(`games/${$(this).attr('id')}.txt`).then(response => response.text());
 						games = games.split('\n');
 						let randomGame = games[Math.floor(Math.random() * games.length)];
 						$('#game').html(randomGame);
@@ -51,7 +51,7 @@
 				<li id="dreamcast">Dreamcast</li>
 				<li id="gamegear">Gamegear</li>
 				<li id="tg16">Turbografx16</li>
-				<li id="mame">MAME<li>
+				<li id="mame">MAME</li>
 				<li id="neogeo">NeoGeo</li>
 				<li id="c64">Commodore 64</li>
 				<li id="amiga">Amiga</li>	
@@ -62,9 +62,10 @@
 		<p>
 		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See <a href='https://boards.4channel.org/vr/catalog#s=gauntlet' target='_blank'>thread</a>/copypasta for more detailed rules.<br/>
 		<a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet/games/">List of games</a> in case you don't trust the random number generator.<br/>
-		<a href="pasta.txt">The copypasta</a> and <a href="thread.png">image</a>.<br/>
+		<a href="pasta.txt">The copypasta</a> and <a href="content/thread.png">image</a>.<br/>
 	</body>
 	<footer>
+		<img src="content/diddy.gif">
 		<ul>
 			<li><a href="mailto:cambysses.dev@gmail.com">contact me with suggestions or bugs</a> | </li>
 			<li><a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet">source</a> | </li>
