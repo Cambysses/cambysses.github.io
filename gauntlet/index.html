@@ -17,6 +17,7 @@
 		<script>
 			$(function() {
 				$("#game-announcer").hide();
+				$("#animated").attr("src",`content/sprites/${Math.floor(Math.random() * 25)}.gif`);
 				$("#game-select ul li").click(function(e){
 					e.preventDefault();
 					$('#pre-game').html(`Your ${$(this).text()} game is`);
@@ -66,7 +67,7 @@
 		<a href="pasta.txt">The copypasta</a> and <a href="content/thread.png">image</a>.<br/>
 	</body>
 	<footer>
-		<img src="content/diddy.gif">
+		<img src="" id="animated">
 		<ul>
 			<li><a href="mailto:cambysses.dev@gmail.com">contact me with suggestions or bugs</a> | </li>
 			<li><a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet">source</a> | </li>

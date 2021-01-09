@@ -1,3 +1,9 @@
+html {
+	text-align: center;
+	background: #444444;
+	color: #aaaaaa;
+}
+
 h1 {
 	font-family: 'Press Start 2P',serif;
 	font-size: 2em;
@@ -68,9 +74,9 @@ a:visited {
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer ul {
@@ -79,11 +85,4 @@ footer ul {
 
 footer ul li {
 	display: inline;
-}
-
-
-html {
-	text-align: center;
-	background: #444444;
-	color: #aaaaaa;
 }
