@@ -12,8 +12,12 @@
 				i = 0
 				setInterval(function()
 				{ 
-					document.getElementsByClassName("trippin")[0].style.filter = `hue-rotate(${i}deg)`;
-					i += 5;
+					var trippin = $(".trippin")[0];
+					if (trippin)
+					{
+						trippin.style.filter = `hue-rotate(${i}deg)`;
+						i += 5;
+					}
 				}, 10);
 			});
 		</script>
@@ -22,8 +26,7 @@
 		<!-- INDEX -->
 		<section class="content index-container">
 			<ul class="links">
-				<li><a href="https://github.com/Cambysses?tab=repositories" target="_blank">Github</a></li>
-				<li><a href="gauntlet" target="_blank">Gauntlet</a></li>
+				<li><p class="internal-link" onclick="loadContent('projects')">Projects</p></li>
 				<li><a href="https://www.instagram.com/cambysses/" target="_blank">Hobby</a></li>
 				<li><p class="internal-link" onclick="loadContent('about')">About</p></li>
 			</ul>
@@ -34,7 +37,22 @@
 				</section>
 			</a>
 		</section>
-		
+
+		<!-- PROJECTS -->
+		<section class="content projects-container">
+			<ul class="links">
+				<li><a href="gauntlet" target="_blank">Gauntlet</a></li>
+				<li><a href="bilgedice" target="_blank">Bilge Dice</a></li>
+				<li><p class="internal-link" onclick="loadContent('about')">Github</p></li>
+			</ul>
+			<a href="https://www.youtube.com/watch?v=SA2o6Nac9Yg" target="_blank">
+				<section class="monkey-container">
+					<img src="content/trippin.gif" class="trippin">
+					<img src="content/monkey.png" class="monkey">
+				</section>
+			</a>
+		</section>
+
 		<!-- ABOUT -->
 		<section class="content about-container">
 			<section class="skills">
@@ -54,13 +72,6 @@
 				</section>		
 			</section>
 		</section>
-		
-		<!-- MUSIC PLAYER -->
-		<section class="music-container">
-			<audio id="music">
-				<source src="content/donkey.mp3" type="audio/mp3">
-			</audio>
-			<p id="state" onclick="toggleAudio()">▶</p>
-		</section>
+
 	</body>
 </html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            html {
+                background: #252525;
+	            color: #aaaaaa;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            li {
+                display: inline;
+                padding: 5px;
+            }
+
+            #game {
+                text-align: center;
+            }
+
+            .die {
+                image-rendering: pixelated;
+                width: 70;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="bilgedice.js"></script>
+    </head>
+    <body>
+        <div id="game">
+            <h1>Your Rolls</h1>
+            <ul id="player-rolls">
+            </ul>
+            <button onclick="roll()">Roll</button>
+
+            <h1>Your Hand</h1>
+            <h2>Current Score: 0</h2>
+            <ul id="player-hand">
+                <li>
+                    <img class="die" src="content/0.png">
+                </li>
+                <li>
+                    <img class="die" src="content/0.png">
+                </li>
+                <li>
+                    <img class="die" src="content/0.png">
+                </li>
+                <li>
+                    <img class="die" src="content/0.png">
+                </li>
+            </ul>
+        </div>
+        <footer>
+            Very WIP recreation of "Bilge Dice" from Neopets
+        </footer>
+    </body>
+</html>

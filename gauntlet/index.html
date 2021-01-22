@@ -20,6 +20,7 @@
 				$("#animated").attr("src",`content/sprites/${Math.floor(Math.random() * 25)}.gif`);
 				$("#game-select ul li").click(function(e){
 					e.preventDefault();
+					//("#game-announcer").hide();
 					$('#pre-game').html(`Your ${$(this).text()} game is`);
 					(async () => {
 						let games = await fetch(`games/${$(this).attr('id')}.txt`).then(response => response.text());

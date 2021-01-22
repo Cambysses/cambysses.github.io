@@ -52,6 +52,7 @@ Captain Commando
 Castlevania: Dracula X 
 Choplifter III
 Chrono Trigger
+Clock Tower (JPN)
 Sid Meier's Civilization
 ClayFighter
 ClayFighter: Tournament Edition
@@ -121,9 +122,11 @@ F-Zero
 Gemfire 
 Genghis Khan II: Clan of the Gray Wolf
 Ghoul Patrol
+Ghost Sweeper Mikami (JPN)
 Gods
 Disney's Goof Troop
 Gradius III
+Gunman's Proof (JPN)
 The Great Circus Mystery Starring Mickey & Minnie 
 Hagane: The Final Conflict
 HAL's Hole in One Golf
@@ -133,7 +136,8 @@ Hook
 Hurricanes
 Hyper V-Ball 
 Hyper Zone
-The Ignition Factor 
+The Ignition Factor
+Ihatovo Monogatari (JPN)
 Illusion of Gaia 
 Imperium
 The Incredible Hulk
@@ -237,6 +241,7 @@ NBA Live 97
 NBA Live 98
 NBA Showdown
 NCAA Basketball 
+Neugier (JPN)
 NFL Quarterback Club
 NFL Quarterback Club 96
 NHL '94

@@ -98,29 +98,6 @@ a {
 		left: 2px;
 	}
 	
-.music-container {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: 5px;
-	margin: 0;
-	color: #07db7c;
-}
-
-.music-container ul {
-	outline: solid;
-	outline-width: 5px;
-	outline-offset: 5px;
-}
-
-.music-container li {
-	font-size: 50%;
-	margin: 0;
-	padding: 0;
-	list-style: inside;
-	list-style: none;
-}
-
 .skills section {
 	display: inline-block;
 }
@@ -135,8 +112,3 @@ a {
 	outline-width: 5px;
 	outline-offset: 10px;
 }
-
-.skills li {
-	padding-bottom: 
-}
-

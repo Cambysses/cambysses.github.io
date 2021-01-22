@@ -13,22 +13,3 @@ function loadContent(content)
 		$(`.${content}-container`).fadeIn(1000);
 	});	
 }
-
-// Play / pause current audo.
-function toggleAudio()
-{
-	var state = $("#state");
-	var music = $("#music");
-	music.volume = 0.25;
-	if (state.innerHTML == "▶")
-	{
-		music.play();
-		state.innerHTML = "⏸";
-	}
-	else
-	{
-		music.pause();
-		state.innerHTML = "▶";
-	}
-}
-
