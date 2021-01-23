@@ -1,7 +1,16 @@
+html, body {
+	margin: 0;
+	height: 100%;
+}
+
 html {
 	text-align: center;
 	background: #141414;
 	color: #aaaaaa;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
 }
 
 h1 {
@@ -19,8 +28,8 @@ h3 {
 	font-weight: normal;
 }
 
-body {
-	font-family: helvetica, arial, sans-serif;
+ul {
+	list-style-type: none;
 }
 
 strong {
@@ -71,6 +80,18 @@ a:visited {
 #game-select ul li:hover {
 	color: #ffffff;
 	cursor: pointer;
+} 
+
+#game {
+	color: #ffffff;
+}
+
+.options * {
+	font-weight: bold;
+}
+
+.options ul li {
+	display: inline-block;
 }
 
 footer {
@@ -79,10 +100,6 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-}
-
-footer ul {
-	list-style-type: none;
 }
 
 footer ul li {

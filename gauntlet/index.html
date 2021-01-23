@@ -1,78 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Retro Game Gauntlet</title>
-		<link rel="stylesheet" type="text/css" href="content/style.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
-		<link rel="icon" type="image/png" href="content/favicon.png">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-00GK9Y91HG"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'G-00GK9Y91HG');
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script>
-			$(function() {
-				$("#game-announcer").hide();
-				$("#animated").attr("src",`content/sprites/${Math.floor(Math.random() * 25)}.gif`);
-				$("#game-select ul li").click(function(e){
-					e.preventDefault();
-					//("#game-announcer").hide();
-					$('#pre-game').html(`Your ${$(this).text()} game is`);
-					(async () => {
-						let games = await fetch(`games/${$(this).attr('id')}.txt`).then(response => response.text());
-						games = games.split('\n');
-						let randomGame = games[Math.floor(Math.random() * games.length)];
-						$('#game').html(randomGame);
-				})()
-					$('#game-announcer').show();
-				});
-			});
-		</script>
-	</head>
-	<body>
-		<h1>Retro Game Gauntlet</h1>
-		<div id="game-announcer">
-			<h3 id="pre-game">Your game is</h3>
-			<h2 id="game"></h2>
-		</div>
-		<div id="game-select">
-			<ul>
-				<li id="nes">NES</li>
-				<li id="snes">SNES</li>
-				<li id="n64">Nintendo 64</li>
-				<li id="gb">Game Boy</li>
-				<li id="gbc">Game Boy Color</li>
-				<li id="gba">Game Boy Advance</li>
-				<li id="mastersystem">Master System</li>
-				<li id="genesis">Megadrive/Genesis</li>
-				<li id="saturn">Saturn</li>
-				<li id="dreamcast">Dreamcast</li>
-				<li id="gamegear">Gamegear</li>
-				<li id="tg16">Turbografx16</li>
-				<li id="ps1">PlayStation 1</li>
-				<li id="mame">MAME</li>
-				<li id="neogeo">NeoGeo</li>
-				<li id="c64">Commodore 64</li>
-				<li id="amiga">Amiga</li>	
-				<li id="dos">DOS</li>					
-			</ul>
-			<br/>
-		</div>
-		<p>
-		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See <a href='https://boards.4channel.org/vr/catalog#s=gauntlet' target='_blank'>thread</a>/copypasta for more detailed rules.<br/>
-		<a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet/games/">List of games</a> in case you don't trust the random number generator.<br/>
-		<a href="pasta.txt">The copypasta</a> and <a href="content/thread.png">image</a>.<br/>
-	</body>
-	<footer>
-		<img src="" id="animated">
+
+<head>
+	<title>Retro Game Gauntlet</title>
+	<link rel="stylesheet" type="text/css" href="content/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="content/favicon.png">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-00GK9Y91HG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-00GK9Y91HG');
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="gauntlet.js"></script>
+</head>
+
+<body>
+	<h1>Retro Game Gauntlet</h1>
+	<div id="game-announcer">
+		<h3 id="pre-game">Your game is</h3>
+		<h2 id="game"></h2>
+	</div>
+	<div id="game-select">
 		<ul>
-			<li><a href="mailto:cambysses.dev@gmail.com">contact me with suggestions or bugs</a> | </li>
-			<li><a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet">source</a> | </li>
-			<li><a href="https://github.com/s3krit">original site created by s3krit</a></li>
+			<li id="nes">NES</li>
+			<li id="snes">SNES</li>
+			<li id="n64">Nintendo 64</li>
+			<li id="gb">Game Boy</li>
+			<li id="gbc">Game Boy Color</li>
+			<li id="gba">Game Boy Advance</li>
+			<li id="mastersystem">Master System</li>
+			<li id="genesis">Megadrive/Genesis</li>
+			<li id="saturn">Saturn</li>
+			<li id="dreamcast">Dreamcast</li>
+			<li id="gamegear">Gamegear</li>
+			<li id="tg16">Turbografx16</li>
+			<li id="ps1">PlayStation 1</li>
+			<li id="mame">MAME</li>
+			<li id="neogeo">NeoGeo</li>
+			<li id="c64">Commodore 64</li>
+			<li id="amiga">Amiga</li>
+			<li id="dos">DOS</li>
 		</ul>
-	</footer>
+		<br />
+	</div>
+	<ul class="options">
+		<li>
+			<input type="checkbox" id="includeJapanese">
+			<label for="includeJapanese">Include Japanese games if available</label>
+		</li>
+	</ul>
+	<div class="info">
+		<strong>Rules:</strong> Play game. Take screenshots. Post on /vr/. See <a
+			href='https://boards.4channel.org/vr/catalog#s=gauntlet' target='_blank'>thread</a>/copypasta for more
+		detailed rules.<br />
+		<a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet/games/">List of games</a> in case
+		you don't trust the random number generator.<br />
+		<a href="pasta.txt">The copypasta</a> and <a href="content/thread.png">image</a>.<br />
+	</div>
+</body>
+<footer>
+	<img src="" id="animated">
+	<ul>
+		<li><a href="mailto:cambysses.dev@gmail.com">contact me with suggestions or bugs</a> | </li>
+		<li><a href="https://github.com/Cambysses/cambysses.github.io/tree/master/gauntlet">source</a> | </li>
+		<li><a href="https://github.com/s3krit">original site created by s3krit</a></li>
+	</ul>
+</footer>
+
 </html>
