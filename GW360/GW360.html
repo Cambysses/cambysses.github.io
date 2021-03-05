@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+            }
+
+            .spin {
+                height: 75%;
+                resize: both;
+            }
+
+            .model-list {
+                cursor: pointer;
+                display: inline-block;
+                list-style-type: none;
+            }
+
+            .model-list li:hover {
+                color: grey;
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                $(".model").each(function () {
+                        $(this).on("click", function() {
+                            getImg($(this).text())
+                        });
+                    })
+            })
+
+            $(document).keydown(function (e) {
+                let src = $(".spin").attr('src');
+                let index = src.split('/')[1].split('.')[0]
+                let newIndex;
+                if (e.key == "e")
+                {
+                    index == 1 ? newIndex = 48 : newIndex = +index -1;
+                    $(".spin").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
+                }
+
+                else if (e.key == "q")
+                {
+                    index == 48 ? newIndex = 1 : newIndex = +index +1;
+                    $(".spin").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
+                }
+
+            });
+
+            function getImg(name) {
+                $(".spin").attr("src", `${name}/1.jpg`);
+            }
+
+        </script>
+    </head>
+    <body>
+        <img class="spin">
+        <div class="models">
+            <ul class="model-list">
+                <li class="model">Primaris Captain</li>
+                <li class="model">Primaris Chaplain</li>
+                <li class="model">Primaris Lieutenant</li>
+                <li class="model">Judiciar</li>
+                <li class="model">Bladeguard Ancient</li>
+                <li class="model">Bladeguard Veteran Squad</li>
+                <li class="model">Eradicator Squad</li>
+                <li class="model">Outrider Squad</li>
+                <li class="model">Intercessor Squad A</li>
+                <li class="model">Intercessor Squad B</li>
+            </ul>
+            <ul class="model-list">
+                <li class="model">Overlord</li>
+                <li class="model">Royal Warden</li>
+                <li class="model">Plasmancer and Cryptothralls</li>
+                <li class="model">Skorpekh Destroyers</li>
+                <li class="model">Necron Warriors A</li>
+                <li class="model">Necron Warriors B</li>
+                <li class="model">Necron Warriors C</li>
+                <li class="model">Necron Warriors D</li>
+                <li class="model">Scarab Swarms A</li>
+                <li class="model">Scarab Swarms B</li>
+            </ul>
+        </div>
+    </body>
+</html>
