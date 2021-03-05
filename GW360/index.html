@@ -28,7 +28,7 @@
             $(document).ready(function() {
                 $(".model").each(function () {
                         $(this).on("click", function() {
-                            getImg($(this).text())
+                            loadImg($(this).text())
                         });
                     })
             })
@@ -51,8 +51,11 @@
 
             });
 
-            function getImg(name) {
+            function loadImg(name) {
                 $(".spin").attr("src", `${name}/1.jpg`);
+                for (var i = 1; i <= 48; i++) {
+                    $("<img />").attr("src", `${name}/${i}.jpg`);
+                }
             }
 
         </script>
