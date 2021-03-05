@@ -11,6 +11,10 @@
                 resize: both;
             }
 
+            .loading-progress {
+                display: block;
+            }
+
             .model-list {
                 cursor: pointer;
                 display: inline-block;
@@ -52,16 +56,18 @@
             });
 
             function loadImg(name) {
-                $(".spin").attr("src", `${name}/1.jpg`);
                 for (var i = 1; i <= 48; i++) {
+                    $(".loading-progress").text(`Loading... ${i}/48`)
                     $("<img />").attr("src", `${name}/${i}.jpg`);
                 }
+                $(".spin").attr("src", `${name}/1.jpg`);
             }
 
         </script>
     </head>
     <body>
         <img class="spin">
+        <span class="loading-progress"></span>
         <div class="models">
             <ul class="model-list">
                 <li class="model">Primaris Captain</li>
