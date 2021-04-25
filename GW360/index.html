@@ -4,6 +4,8 @@
             body {
                 text-align: center;
                 font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+                color: white;
+                background-color: #252525;
             }
 
             .spin {
@@ -11,8 +13,25 @@
                 resize: both;
             }
 
+            .arrow {
+                font-size: 200%;
+                font-weight: bold;
+            }
+
+            .left {
+                float: left;
+            }
+
+            .right {
+                float: right;
+            }
+
             .loading-progress {
                 display: block;
+            }
+
+            .models {
+                display: inline-block;
             }
 
             .model-list {
@@ -61,6 +80,7 @@
                     $("<img />").attr("src", `${name}/${i}.jpg`);
                 }
                 $(".spin").attr("src", `${name}/1.jpg`);
+                $(".loading-progress").text("");
             }
 
         </script>
@@ -69,6 +89,8 @@
         <img class="spin">
         <span class="loading-progress"></span>
         <div class="models">
+            <span class="arrow left">⭮ Q</span>
+            <span class="arrow right">E ⭯</span>
             <ul class="model-list">
                 <li class="model">Primaris Captain</li>
                 <li class="model">Primaris Chaplain</li>

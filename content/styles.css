@@ -39,7 +39,6 @@ a {
 }
 
 .links {
-	text-transform: uppercase;
 	display: inline-block;
 	margin: 0;
 	list-style: inside;
@@ -97,7 +96,11 @@ a {
 		top: 2px;
 		left: 2px;
 	}
-	
+
+.skills {
+	margin-bottom: 50px;
+}
+
 .skills section {
 	display: inline-block;
 }
@@ -111,4 +114,8 @@ a {
 	outline: solid;
 	outline-width: 5px;
 	outline-offset: 10px;
+}
+
+.contact {
+	text-align: center;
 }
