@@ -51,10 +51,14 @@ img {
 }
 
 footer {
-    margin-top: 75px;
     font-size: 18px;
     font-family: opensans;
     text-align: center;
+}
+
+hr {
+    background-color: lightgrey;
+    margin-top: 50px;
 }
 
 .copyright {
@@ -112,12 +116,16 @@ footer {
 }
 
 .theater img {
-    z-index: 1000;
+    width: 80%;
+    object-fit: cover;
     background-color: white;;
     padding: 1rem;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
 }
 
 .container {
