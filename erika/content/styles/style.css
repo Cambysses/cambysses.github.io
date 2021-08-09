@@ -39,7 +39,7 @@ h1 {
 }
 
 h1 a {
-
+    white-space: nowrap;
     color: #FFA3A3;
     text-decoration: none;
     cursor: pointer;
@@ -51,7 +51,8 @@ img {
 }
 
 footer {
-    font-size: 14px;
+    margin-top: 75px;
+    font-size: 18px;
     font-family: opensans;
     text-align: center;
 }
@@ -156,7 +157,6 @@ footer {
 
 .about {
     margin-top: 25px;
-    margin-bottom: 75px;
 }
 
 .about h2 {
