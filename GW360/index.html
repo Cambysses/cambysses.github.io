@@ -8,7 +8,7 @@
                 background-color: #252525;
             }
 
-            .spin {
+            .featured {
                 height: 75%;
                 resize: both;
             }
@@ -57,36 +57,47 @@
             })
 
             $(document).keydown(function (e) {
-                let src = $(".spin").attr('src');
+                let src = $(".featured").attr('src');
                 let index = src.split('/')[1].split('.')[0]
                 let newIndex;
                 if (e.key == "e")
                 {
                     index == 1 ? newIndex = 48 : newIndex = +index -1;
-                    $(".spin").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
+                    $(".featured").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
                 }
 
                 else if (e.key == "q")
                 {
                     index == 48 ? newIndex = 1 : newIndex = +index +1;
-                    $(".spin").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
+                    $(".featured").attr("src", `${src.split('/')[0]}/${newIndex}.jpg`);
                 }
 
             });
+	
+			function countFiles() {
+				$.ajax({
+					url: "http://C:/Users/Bill/Documents/GitHub/cambysses.github.io/GW360" + $(".featured").attr("src").split("/")[0],
+					success: function(data){
+						$(data).find("a:contains(.jpg)").each(function(){
+							console.log("ok");
+						});
+					}
+				});
+			}
 
             function loadImg(name) {
                 for (var i = 1; i <= 48; i++) {
                     $(".loading-progress").text(`Loading... ${i}/48`)
                     $("<img />").attr("src", `${name}/${i}.jpg`);
                 }
-                $(".spin").attr("src", `${name}/1.jpg`);
+                $(".featured").attr("src", `${name}/1.jpg`);
                 $(".loading-progress").text("");
             }
 
         </script>
     </head>
     <body>
-        <img class="spin">
+        <img class="featured">
         <span class="loading-progress"></span>
         <div class="models">
             <span class="arrow left">⭮ Q</span>
@@ -114,6 +125,7 @@
                 <li class="model">Necron Warriors D</li>
                 <li class="model">Scarab Swarms A</li>
                 <li class="model">Scarab Swarms B</li>
+				<li class="model">Exalted Deathbringer</li>
             </ul>
         </div>
     </body>
